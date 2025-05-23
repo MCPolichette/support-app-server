@@ -1,0 +1,31 @@
+{
+	"name": "support-app-server",
+	"version": "1.0.0",
+	"description": "my backend app server",
+	"type": "module",
+	"main": "src/index.js",
+	"scripts": {
+		"dev": "nodemon src/index.js",
+		"start": "node src/index.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/MCPolichette/support-app-server.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/MCPolichette/support-app-server/issues"
+	},
+	"homepage": "https://github.com/MCPolichette/support-app-server#readme",
+	"dependencies": {
+		"dotenv": "^16.5.0",
+		"express": "^5.1.0",
+		"save-dev": "^0.0.1-security"
+	},
+	"devDependencies": {
+		"@types/node": "^22.15.21",
+		"nodemon": "^3.1.10"
+	}
+}
