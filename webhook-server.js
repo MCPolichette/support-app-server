@@ -28,6 +28,9 @@ app.post("/github-webhook", (req, res) => {
 		res.status(200).send("Ignored – not main branch");
 	}
 });
+app.get("/ping", (req, res) => {
+	res.status(200).json({ message: "pong", time: Date.now() });
+});
 
 app.listen(PORT, () => {
 	console.log(`📡 Webhook server listening on port ${PORT}`);
