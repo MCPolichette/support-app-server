@@ -1,7 +1,13 @@
 import express from "express";
 import { exec } from "child_process";
+import cors from "cors";
 
 const app = express();
+app.use(
+	cors({
+		origin: ["http://localhost:3000", "https://chetti.tools"],
+	})
+);
 app.use(express.json());
 
 const PORT = 3001;
@@ -32,6 +38,6 @@ app.get("/ping", (req, res) => {
 	res.status(200).json({ message: "pong", time: Date.now() });
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0", () => {
 	console.log(`📡 Webhook server listening on port ${PORT}`);
 });
